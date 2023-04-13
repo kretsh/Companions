@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DAB4970329E6D33E00876515 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4970229E6D33E00876515 /* network.swift */; };
+		DAB4970529E81EC200876515 /* previewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4970429E81EC200876515 /* previewView.swift */; };
 		DABBC83529E2FAB00091AF7B /* companions_swiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */; };
 		DABBC83729E2FAB00091AF7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBC83629E2FAB00091AF7B /* ContentView.swift */; };
 		DABBC83929E2FAB20091AF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABBC83829E2FAB20091AF7B /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		DAB4970229E6D33E00876515 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
+		DAB4970429E81EC200876515 /* previewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewView.swift; sourceTree = "<group>"; };
 		DABBC83129E2FAB00091AF7B /* companions_swiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = companions_swiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = companions_swiftUIApp.swift; sourceTree = "<group>"; };
 		DABBC83629E2FAB00091AF7B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				DABBC83629E2FAB00091AF7B /* ContentView.swift */,
 				DABBC84229E311EC0091AF7B /* SearchStruct.swift */,
 				DABBC84729E58A330091AF7B /* BackgroundStruct.swift */,
+				DAB4970429E81EC200876515 /* previewView.swift */,
 				DABBC83829E2FAB20091AF7B /* Assets.xcassets */,
 				DABBC84929E593360091AF7B /* Model.swift */,
 				DABBC84F29E5960E0091AF7B /* accessToken.swift */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB4970329E6D33E00876515 /* network.swift in Sources */,
+				DAB4970529E81EC200876515 /* previewView.swift in Sources */,
 				DABBC84A29E593360091AF7B /* Model.swift in Sources */,
 				DABBC84329E311EC0091AF7B /* SearchStruct.swift in Sources */,
 				DABBC83729E2FAB00091AF7B /* ContentView.swift in Sources */,

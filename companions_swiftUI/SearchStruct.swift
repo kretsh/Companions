@@ -21,6 +21,7 @@ struct SearchView: View{
                     .foregroundColor(Color(hue: 0.592, saturation: 0.359, brightness: 0.952))
                     .bold()
                     .font(.system(size: 26, weight: .black, design: .default))
+                    .kerning(8)
             }
             thing
         }

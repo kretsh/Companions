@@ -19,10 +19,18 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             backgroundUI
-            searchUI.padding(15)
-            for i in 1...5{
-                Text(<#T##S#>)
-            }
+            searchUI.padding(20)
+//            List{
+//                for i in 1...3{
+//
+//                }
+//                Text("2")
+//                Text("4")
+//                Text("6")
+//            }
+////            for i in 1...5{
+////                Text(<#T##S#>)
+//            }
             }
             
     }
