@@ -8,30 +8,39 @@
 import SwiftUI
 
 struct previewView: View {
-    @ObservedObject var model = usersModel()
+    let user: UserResponse
     
     
+    init(_ userToShow: UserResponse){
+        self.user = userToShow
+    }
     var body: some View {
-        let isLoading: Bool = model.isLoading
-        ZStack {
-            if isLoading {
-                ProgressView()
-            } else {
-                Rectangle()
-                    .foregroundColor(.blue)
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                VStack{
-                    AsyncImage(url: model.users[4].images.versions.small)
+        ZStack{
+            HStack{
+                AsyncImage(url: user.images.versions.small){ image in
+                    image
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(maxWidth: sizes.maxWidth, maxHeight: sizes.maxHeight, alignment: .leading)
+                        .aspectRatio(contentMode: .fit)
+                        
+                    
+                } placeholder: {
+                    Image(systemName: "photo.circle")
+                        .resizable()
+                        .frame(maxWidth: sizes.maxWidth, maxHeight: sizes.maxHeight, alignment: .leading)
                 }
-                
+                Text(user.nickname).foregroundColor(.blue).frame(alignment: .leading)
+                Spacer()
+                Text("Level 10")
             }
         }
     }
-}
-                    
-
-struct previewView_Previews: PreviewProvider {
-    static var previews: some View {
-        previewView()
+    
+    private struct sizes{
+        static let maxHeight: CGFloat = 60
+        static let maxWidth: CGFloat = 40
     }
 }
+
+                    

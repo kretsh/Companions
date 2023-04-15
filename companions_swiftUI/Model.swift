@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct UserResponse: Codable {
+struct UserResponse: Codable, Identifiable{
     var id:         Int
     var name:       String
     var surname:    String
@@ -82,7 +82,6 @@ class usersModel: ObservableObject {
 
         let headers: HTTPHeaders = ["Authorization": "Bearer \(String(describing: accessToken.accessToken))"]
         
-        print(headers)
         Alamofire.AF.request(url, method: .get, parameters: parameters, headers: headers)
             .validate()
             .responseDecodable(of: [UserResponse].self){ response in
@@ -90,21 +89,10 @@ class usersModel: ObservableObject {
                 case .success(let user):
                     self.users = user
                     self.isLoading = false
-                    print(user[0].images.versions.small)
-                    print(user[1].images.versions.small)
-                    print(user[2].images.versions.small)
-                    print(user[3].images.versions.small)
-                    print(user[4].images.versions.small)
-                    print(user[5].images.versions.small)
-                    print(user[6].images.versions.small)
-                    print(user[7].images.versions.small)
                 case .failure(let error):
-                    print("i'm here")
                     print(error.acceptableContentTypes)
-//                    print(error.errorDescription)
                     print(String(describing: error))
                 }
             }
-        Thread.sleep(forTimeInterval: 3.0)
     }
 }

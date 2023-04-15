@@ -11,8 +11,9 @@ import SwiftUI
 struct companions_swiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            previewView()
-//            ContentView()
+//            previewView()
+            ContentView()
+            
         }
     }
 }

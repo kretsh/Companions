@@ -9,33 +9,30 @@ import Alamofire
 import SwiftUI
 
 
-
 struct ContentView: View {
-    var searchUI = SearchView()
+    @ObservedObject var model = usersModel()
+    
     var backgroundUI = BackgroundView()
-    var model = usersModel()
-    
-    
+
     var body: some View {
         ZStack{
-            backgroundUI
-            searchUI.padding(20)
-//            List{
-//                for i in 1...3{
-//
-//                }
-//                Text("2")
-//                Text("4")
-//                Text("6")
-//            }
-////            for i in 1...5{
-////                Text(<#T##S#>)
-//            }
+            let isLoading: Bool = model.isLoading
+            ZStack {
+                if isLoading {
+                    ProgressView()
+                } else {
+                    var searchUI = SearchView(model.users)
+                    backgroundUI
+                    searchUI
+                }
             }
-            
+        }
     }
 }
-    
+
+
+
+
 
 
 
