@@ -1,17 +1,17 @@
 //
-//  previewView.swift
+//  SearchView.swift
 //  companions_swiftUI
 //
-//  Created by PAUL KRETSH on 13.04.2023.
+//  Created by PAUL KRETSH on 16.04.2023.
 //
 
 import SwiftUI
 
-struct previewView: View {
-    let user: UserResponse
+struct QuickUserView: View {
+    let user: User
     
     
-    init(_ userToShow: UserResponse){
+    init(_ userToShow: User){
         self.user = userToShow
     }
     var body: some View {
@@ -32,7 +32,7 @@ struct previewView: View {
                 }
                 Text(user.nickname).foregroundColor(.blue).frame(alignment: .leading)
                 Spacer()
-                Text("Level 10")
+                Text("Level 9")
             }
         }
     }
@@ -42,5 +42,3 @@ struct previewView: View {
         static let maxWidth: CGFloat = 40
     }
 }
-
-                    

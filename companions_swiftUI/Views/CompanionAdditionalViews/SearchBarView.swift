@@ -7,19 +7,21 @@
 
 import SwiftUI
 
-struct SearchView: View{
+struct SearchBarView: View{
     @State private var searchText: String = ""
-    let users: [UserResponse]
+    let users: [User]
     
-    init(_ userToShow: [UserResponse]){
+    init(_ userToShow: [User]){
         self.users = userToShow
     }
     
-    var filteredData: [UserResponse] {
+    var filteredData: [User] {
             if searchText.isEmpty {
                 return users
             } else {
-                return users.filter { $0.nickname.localizedCaseInsensitiveContains(searchText) }
+                return users.filter { $0.nickname.localizedCaseInsensitiveContains(searchText) ||
+                    $0.name.localizedCaseInsensitiveContains(searchText)
+                }
             }
         }
     
@@ -40,7 +42,7 @@ struct SearchView: View{
             }
             else{
                     List(filteredData, id: \.self.nickname) { item in
-                        previewView(item)
+                        QuickUserView(item)
                             .onTapGesture {
                             print("Hello world")
                         }
