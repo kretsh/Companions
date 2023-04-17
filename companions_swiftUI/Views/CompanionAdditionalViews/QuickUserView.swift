@@ -32,7 +32,7 @@ struct QuickUserView: View {
                 }
                 Text(user.nickname).foregroundColor(.blue).frame(alignment: .leading)
                 Spacer()
-                Text("Level 9")
+                Text(user.displayname)
             }
         }
     }

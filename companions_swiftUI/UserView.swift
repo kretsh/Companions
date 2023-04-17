@@ -7,9 +7,24 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct UserView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                NavigationLink(destination: DetailView()) {
+                    Text("Tap me to go to the detail view!")
+                }
+            }
+            .navigationTitle("My List")
+        }
+    }
+}
+
+struct DetailView: View {
+    var body: some View {
+        Text("Welcome to the detail view!")
     }
 }
 

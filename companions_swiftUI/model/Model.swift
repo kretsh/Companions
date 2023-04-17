@@ -10,7 +10,7 @@ import Alamofire
 
 
 class usersModel: ObservableObject {
-    private var token: AccessTokenResponse?
+    private var token: AccessToken?
     private(set) var users: [User] = []
     private(set) var network = networkVariables()
     @Published var isLoading = true
@@ -20,7 +20,7 @@ class usersModel: ObservableObject {
     init(){
         Alamofire.AF.request(network.urlToken, method: .post, parameters: network.parameters)
             .validate()
-            .responseDecodable(of: AccessTokenResponse.self) { [weak self] response in
+            .responseDecodable(of: AccessToken.self) { [weak self] response in
                     switch response.result {
                     case .success(let tokenResponse):
                         self?.token = tokenResponse
@@ -38,7 +38,6 @@ class usersModel: ObservableObject {
             self.errorLoading = true
             return
         }
-        print("Vecher v hatu")
         let parameters = ["page[size]": "100",
                           "page[number]": "\(String(describing: usersModel.page))"]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(String(describing: accessToken.accessToken))"]
@@ -56,12 +55,13 @@ class usersModel: ObservableObject {
                         self.users.append(contentsOf: user)
                     }
                     usersModel.page += 1
-                    if usersModel.page >= 15 || user.count < 100 {
+                    if usersModel.page >= 5 || user.count < 100 {
                         self.isLoading = false
                     }
-                    if user.count == 100{
+                    if user.count == 99{
                         usersFetch()
                     }
+                    self.isLoading = false
 
                 case .failure(let error):
                     print(error.acceptableContentTypes)
