@@ -13,6 +13,7 @@
 		DA01069B29EC5C530089EF46 /* ImageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01069A29EC5C530089EF46 /* ImageInterface.swift */; };
 		DA01069D29EC61160089EF46 /* AccessTokenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01069C29EC61160089EF46 /* AccessTokenInterface.swift */; };
 		DA01069F29EC6DEC0089EF46 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01069E29EC6DEC0089EF46 /* UserView.swift */; };
+		DA539E1729ED9B9B009DA7C8 /* example.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA539E1629ED9B9B009DA7C8 /* example.swift */; };
 		DAB4970329E6D33E00876515 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4970229E6D33E00876515 /* network.swift */; };
 		DABBC83529E2FAB00091AF7B /* companions_swiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */; };
 		DABBC83929E2FAB20091AF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABBC83829E2FAB20091AF7B /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		DA01069A29EC5C530089EF46 /* ImageInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterface.swift; sourceTree = "<group>"; };
 		DA01069C29EC61160089EF46 /* AccessTokenInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenInterface.swift; sourceTree = "<group>"; };
 		DA01069E29EC6DEC0089EF46 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		DA539E1629ED9B9B009DA7C8 /* example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = example.swift; sourceTree = "<group>"; };
 		DAB4970229E6D33E00876515 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		DABBC83129E2FAB00091AF7B /* companions_swiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = companions_swiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = companions_swiftUIApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				DA01068C29EC1AF00089EF46 /* CompanionView.swift */,
+				DA01069E29EC6DEC0089EF46 /* UserView.swift */,
 				DABBC84729E58A330091AF7B /* BackgroundView.swift */,
 				DA01069529EC4F870089EF46 /* CompanionAdditionalViews */,
 			);
@@ -69,6 +72,7 @@
 			children = (
 				DA01069729EC54720089EF46 /* QuickUserView.swift */,
 				DABBC84229E311EC0091AF7B /* SearchBarView.swift */,
+				DA539E1629ED9B9B009DA7C8 /* example.swift */,
 				DA01069229EC4F210089EF46 /* RotatingProgressView.swift */,
 			);
 			path = CompanionAdditionalViews;
@@ -109,7 +113,6 @@
 				DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */,
 				DAB4970229E6D33E00876515 /* network.swift */,
 				DABBC83829E2FAB20091AF7B /* Assets.xcassets */,
-				DA01069E29EC6DEC0089EF46 /* UserView.swift */,
 				DABBC83A29E2FAB20091AF7B /* Preview Content */,
 			);
 			path = companions_swiftUI;
@@ -205,6 +208,7 @@
 				DA01068D29EC1AF00089EF46 /* CompanionView.swift in Sources */,
 				DABBC84A29E593360091AF7B /* Model.swift in Sources */,
 				DABBC84329E311EC0091AF7B /* SearchBarView.swift in Sources */,
+				DA539E1729ED9B9B009DA7C8 /* example.swift in Sources */,
 				DA01069329EC4F210089EF46 /* RotatingProgressView.swift in Sources */,
 				DA01069F29EC6DEC0089EF46 /* UserView.swift in Sources */,
 				DA01069B29EC5C530089EF46 /* ImageInterface.swift in Sources */,

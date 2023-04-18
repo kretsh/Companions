@@ -28,5 +28,22 @@ struct User: Codable, Identifiable{
 }
 
 
+struct UserFullR: Codable{
+    var name:   String
+    
+    enum CodingKeys: String, CodingKey{
+        case name = "first_name"
+    }
+}
+
+struct UserFull: Identifiable{
+    var id: ObjectIdentifier
+    
+    var name:   String
+    
+
+}
+
+
 
 

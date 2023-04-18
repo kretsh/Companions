@@ -10,9 +10,10 @@ import Foundation
 struct networkVariables{
     static let uid = "u-s4t2ud-d800c91cbb36a2ebc8ab518f6e38cd498dd754513312a9ce565dac0cd3207d9c"
 //    static let secret: String? = nil
-    static let secret = "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"
+    static let secret = "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"
     let urlToken = "https://api.intra.42.fr/oauth/token"
     let urlUsers = "https://api.intra.42.fr/v2/campus/44/users"
+    let urlUser = "https://api.intra.42.fr/v2/users/106332"
     
     
     let parameters: [String: Any] = [

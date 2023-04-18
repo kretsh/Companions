@@ -12,21 +12,20 @@ struct CompanionView: View {
         @ObservedObject var viewModel = usersModel()
 
     var body: some View {
-        NavigationView{
-            ZStack{
-                backgroundUI
-                if !viewModel.errorLoading{
-                    if viewModel.isLoading {
-                        RotatingProgressView()
-                        
-                    } else {
-                        SearchBarView(viewModel)
-                    }
-                }else{
-                    VStack{
-                        Image("small_shazam")
-                        Text("You are not allowed to pass")
-                    }
+        ZStack{
+            
+            if !viewModel.errorLoading{
+                if viewModel.isLoading {
+                    backgroundUI
+                    RotatingProgressView()
+                    
+                } else {
+                    SearchBarView(viewModel)
+                }
+            }else{
+                VStack{
+                    Image("small_shazam")
+                    Text("You are not allowed to pass")
                 }
             }
         }
