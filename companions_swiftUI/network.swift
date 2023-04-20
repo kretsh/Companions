@@ -13,7 +13,8 @@ struct networkVariables{
     static let secret = "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"
     let urlToken = "https://api.intra.42.fr/oauth/token"
     let urlUsers = "https://api.intra.42.fr/v2/campus/44/users"
-    let urlUser = "https://api.intra.42.fr/v2/users/106332"
+    let urlUser = "https://api.intra.42.fr/v2/users/96798"
+    let urlImageAch = "https://cdn.intra.42.fr/achievement/image/"
     
     
     let parameters: [String: Any] = [

@@ -72,7 +72,7 @@ struct SearchBarView: View {
     @State private var searchText: String = ""
     let users: [User]
     let referenceModel: usersModel
-    @State var user: User?
+    @State var user: UserFull?
     
     init(_ model: usersModel) {
         self.users = model.users
@@ -118,9 +118,9 @@ struct SearchBarView: View {
                         if filteredData.count != 0 {
                             List(filteredData, id: \.nickname) { item in
                                 Button(action: {
+                                    let _ = print(item.id)
                                     fetchData(id: item.id)
                                 }){QuickUserView(item)}
-                                //
                                     .contentShape(Rectangle())
                             }
                             .listStyle(PlainListStyle())

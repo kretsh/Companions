@@ -21,10 +21,24 @@ import SwiftUI
 //}
 
 struct DetailView: View {
-    let user: User?
+    let user: UserFull
     
     var body: some View {
-        Text(user?.name ?? "Template")
+        ScrollView{
+            ZStack{
+                BackgroundView()
+//                Image("Fluvius") // Заглушка, нужны обои его коалиции
+//                    .resizable()
+//                    .frame(maxHeight: .infinity)
+                AsyncImage(url: user.image.versions.large)
+//                AsyncImage(url: user.image.versions.large)
+                Text("Template")
+                Text(user.name)
+                Text(user.location ?? "Otdihaet")
+            }
+            }
+            
+            
     }
 }
 

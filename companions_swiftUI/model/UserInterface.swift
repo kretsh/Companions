@@ -1,13 +1,13 @@
+////
+////  accessToken.swift
+////  companions_swiftUI
+////
+////  Created by PAUL KRETSH on 11.04.2023.
+////
 //
-//  accessToken.swift
-//  companions_swiftUI
-//
-//  Created by PAUL KRETSH on 11.04.2023.
-//
-
 import Foundation
-
-
+//
+//
 struct User: Codable, Identifiable{
   
     var id:             Int
@@ -26,24 +26,5 @@ struct User: Codable, Identifiable{
         case displayname
     }
 }
-
-
-struct UserFullR: Codable{
-    var name:   String
-    
-    enum CodingKeys: String, CodingKey{
-        case name = "first_name"
-    }
-}
-
-struct UserFull: Identifiable{
-    var id: ObjectIdentifier
-    
-    var name:   String
-    
-
-}
-
-
-
+ 
 

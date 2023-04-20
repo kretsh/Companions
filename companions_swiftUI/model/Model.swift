@@ -44,6 +44,7 @@ class usersModel: ObservableObject {
             self.errorLoading = true
             return
         }
+        print(accessToken.accessToken)
         let parameters = ["page[size]": "100",
                           "page[number]": "\(String(describing: usersModel.page))"]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(String(describing: accessToken.accessToken))"]
@@ -53,14 +54,10 @@ class usersModel: ObservableObject {
             .responseDecodable(of: [User].self){ [self] response in
                 switch response.result {
                 case .success(let user):
-                    print("Hello there \(usersModel.page)")
-                    if usersModel.page == 1{
-                        self.users = user
-                    } else{
-                        self.users.append(contentsOf: user)
-                    }
+//                    print("Hello there \(usersModel.page)")
+                    self.users.append(contentsOf: user)
                     usersModel.page += 1
-                    if usersModel.page >= 5 || user.count < 100 {
+                    if usersModel.page >= 13 || user.count < 100 {
                         self.isLoading = false
                     }
                     if user.count == 99{
@@ -69,36 +66,29 @@ class usersModel: ObservableObject {
                     self.isLoading = false
                     
                 case .failure(let error):
-                    print(error.acceptableContentTypes)
-                    print(String(describing: error))
+                    self.errorLoading = true
                 }
             }
     }
     
-    func userFetch(idOfUser id: Int, completion: @escaping (User) -> Void){
+    func userFetch(idOfUser id: Int, completion: @escaping (UserFull) -> Void){
 //        isLoading = true
-        var userResp: UserFullR?
-        var user: User
-        print("i'm breaking here 1")
         guard let accessToken = self.token else {
-            print("i'm breaking here")
             self.errorLoading = true
             return
         }
-        print("i'm breaking here 2")
         let headers:HTTPHeaders = ["Authorization": "Bearer \(String(describing: accessToken.accessToken))"]
         let parameters = ["id": String(id)]
         Alamofire.AF.request(network.urlUser, method: .get, parameters: parameters, headers: headers)
             .validate()
-            .responseDecodable(of: UserFullR.self){ [self] response in
+            .responseDecodable(of: UserFullResponse.self){ [self] response in
                 switch response.result{
                 case .success(let user):
-                    print("I'm in user fetch")
-                    print(user.name)
-                    userResp = user
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        completion(self.users[0])
-                           }
+                    var fetchUser: UserFull
+                    fetchUser = UserFull(userToCopy: user)
+                    DispatchQueue.main.async {
+                        completion(fetchUser)
+                    }
                     isLoading = false
                 case .failure(let error):
                     print(error.acceptableContentTypes)

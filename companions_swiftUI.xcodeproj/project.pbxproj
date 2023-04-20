@@ -13,6 +13,11 @@
 		DA01069B29EC5C530089EF46 /* ImageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01069A29EC5C530089EF46 /* ImageInterface.swift */; };
 		DA01069D29EC61160089EF46 /* AccessTokenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01069C29EC61160089EF46 /* AccessTokenInterface.swift */; };
 		DA01069F29EC6DEC0089EF46 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01069E29EC6DEC0089EF46 /* UserView.swift */; };
+		DA0F822B29EECBA3004641E0 /* CursusInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F822A29EECBA3004641E0 /* CursusInterface.swift */; };
+		DA0F822D29EED3A8004641E0 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F822C29EED3A8004641E0 /* Interfaces.swift */; };
+		DA0F822F29F03D31004641E0 /* Interfaces2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F822E29F03D31004641E0 /* Interfaces2.swift */; };
+		DA0F823329F041A7004641E0 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F823229F041A7004641E0 /* TemplateView.swift */; };
+		DA0F823529F13F94004641E0 /* testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F823429F13F94004641E0 /* testing.swift */; };
 		DA539E1729ED9B9B009DA7C8 /* example.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA539E1629ED9B9B009DA7C8 /* example.swift */; };
 		DAB4970329E6D33E00876515 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4970229E6D33E00876515 /* network.swift */; };
 		DABBC83529E2FAB00091AF7B /* companions_swiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */; };
@@ -32,6 +37,11 @@
 		DA01069A29EC5C530089EF46 /* ImageInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterface.swift; sourceTree = "<group>"; };
 		DA01069C29EC61160089EF46 /* AccessTokenInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenInterface.swift; sourceTree = "<group>"; };
 		DA01069E29EC6DEC0089EF46 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		DA0F822A29EECBA3004641E0 /* CursusInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusInterface.swift; sourceTree = "<group>"; };
+		DA0F822C29EED3A8004641E0 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		DA0F822E29F03D31004641E0 /* Interfaces2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces2.swift; sourceTree = "<group>"; };
+		DA0F823229F041A7004641E0 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
+		DA0F823429F13F94004641E0 /* testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testing.swift; sourceTree = "<group>"; };
 		DA539E1629ED9B9B009DA7C8 /* example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = example.swift; sourceTree = "<group>"; };
 		DAB4970229E6D33E00876515 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		DABBC83129E2FAB00091AF7B /* companions_swiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = companions_swiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +71,7 @@
 			children = (
 				DA01068C29EC1AF00089EF46 /* CompanionView.swift */,
 				DA01069E29EC6DEC0089EF46 /* UserView.swift */,
+				DA0F823229F041A7004641E0 /* TemplateView.swift */,
 				DABBC84729E58A330091AF7B /* BackgroundView.swift */,
 				DA01069529EC4F870089EF46 /* CompanionAdditionalViews */,
 			);
@@ -83,8 +94,11 @@
 			children = (
 				DABBC84929E593360091AF7B /* Model.swift */,
 				DABBC84F29E5960E0091AF7B /* UserInterface.swift */,
+				DA0F822C29EED3A8004641E0 /* Interfaces.swift */,
+				DA0F822E29F03D31004641E0 /* Interfaces2.swift */,
 				DA01069C29EC61160089EF46 /* AccessTokenInterface.swift */,
 				DA01069A29EC5C530089EF46 /* ImageInterface.swift */,
+				DA0F822A29EECBA3004641E0 /* CursusInterface.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -112,6 +126,7 @@
 				DA01069429EC4F620089EF46 /* Views */,
 				DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */,
 				DAB4970229E6D33E00876515 /* network.swift */,
+				DA0F823429F13F94004641E0 /* testing.swift */,
 				DABBC83829E2FAB20091AF7B /* Assets.xcassets */,
 				DABBC83A29E2FAB20091AF7B /* Preview Content */,
 			);
@@ -204,6 +219,7 @@
 			files = (
 				DA01069D29EC61160089EF46 /* AccessTokenInterface.swift in Sources */,
 				DA01069829EC54720089EF46 /* QuickUserView.swift in Sources */,
+				DA0F822F29F03D31004641E0 /* Interfaces2.swift in Sources */,
 				DAB4970329E6D33E00876515 /* network.swift in Sources */,
 				DA01068D29EC1AF00089EF46 /* CompanionView.swift in Sources */,
 				DABBC84A29E593360091AF7B /* Model.swift in Sources */,
@@ -214,6 +230,10 @@
 				DA01069B29EC5C530089EF46 /* ImageInterface.swift in Sources */,
 				DABBC85029E5960E0091AF7B /* UserInterface.swift in Sources */,
 				DABBC84829E58A330091AF7B /* BackgroundView.swift in Sources */,
+				DA0F822D29EED3A8004641E0 /* Interfaces.swift in Sources */,
+				DA0F823529F13F94004641E0 /* testing.swift in Sources */,
+				DA0F823329F041A7004641E0 /* TemplateView.swift in Sources */,
+				DA0F822B29EECBA3004641E0 /* CursusInterface.swift in Sources */,
 				DABBC83529E2FAB00091AF7B /* companions_swiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
