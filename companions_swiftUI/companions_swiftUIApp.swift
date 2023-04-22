@@ -11,8 +11,9 @@ import SwiftUI
 struct companions_swiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-//            CompanionView()
-            TemplateView()
+            CompanionView()
+//            TemplateView()
+//            SVGView(url: URL(string: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Svg_example.svg")!)
         }
     }
 }

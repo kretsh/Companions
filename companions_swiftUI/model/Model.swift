@@ -79,7 +79,7 @@ class usersModel: ObservableObject {
         }
         let headers:HTTPHeaders = ["Authorization": "Bearer \(String(describing: accessToken.accessToken))"]
         let parameters = ["id": String(id)]
-        Alamofire.AF.request(network.urlUser, method: .get, parameters: parameters, headers: headers)
+        Alamofire.AF.request(network.urlUser + String(98547), method: .get, parameters: parameters, headers: headers)
             .validate()
             .responseDecodable(of: UserFullResponse.self){ [self] response in
                 switch response.result{

@@ -7,11 +7,21 @@
 
 import Foundation
 
-struct UserFull: Identifiable{
+class UserFull: Identifiable{
     var id: UUID
     var name: String
     var location: String?
     var image: UserFullResponseImage
+    var campus: String?
+    var nickname: String
+    var wallet: String
+    var points: String
+    var cursus: String?
+    var member: String
+    var level: Double?
+    var phone: String?
+    var email: String
+    var projects: [ProjectsUser]
     
     
     init(userToCopy rhs: UserFullResponse) {
@@ -19,8 +29,21 @@ struct UserFull: Identifiable{
         self.id = UUID()
 //        self.images = rhs.image
         self.name = rhs.displayname
+        self.nickname = rhs.login
         self.location = rhs.location
         self.image = rhs.image
+        self.campus = rhs.campus.last?.name
+        self.wallet = String(rhs.wallet)
+        self.points = String(rhs.correctionPoint)
+//        self.cursus = rhs.cursusUsers.filter{item in item.cursus.name.localizedStandardContains("42Cursus") || item.cursus.name.localizedStandardContains("42Cursus")}
+        self.cursus = rhs.cursusUsers[1].cursus.name
+        self.member = rhs.kind
+        self.level = rhs.cursusUsers[1].level
+        self.email = rhs.email
+        self.phone = rhs.phone
+        self.projects = rhs.projectsUsers
+        
+        
     }
 }
 
@@ -29,7 +52,8 @@ struct UserFull: Identifiable{
 struct UserFullResponse: Codable {
     let email, login, displayname, kind: String
     let image: UserFullResponseImage
-    let staff: Bool
+    let phone: String?
+    let staff: Bool?
     let correctionPoint: Int
     let poolMonth, poolYear: String
     let location: String?
@@ -39,10 +63,11 @@ struct UserFullResponse: Codable {
     let cursusUsers: [CursusUser]
     let projectsUsers: [ProjectsUser]
     let achievements: [Achievement]
+    let campus: [Campus]
 
     enum CodingKeys: String, CodingKey {
         case email, login, displayname, kind, image
-        case staff = "staff?"
+        case staff = "staff"
         case correctionPoint = "correction_point"
         case poolMonth = "pool_month"
         case poolYear = "pool_year"
@@ -53,11 +78,51 @@ struct UserFullResponse: Codable {
         case cursusUsers = "cursus_users"
         case projectsUsers = "projects_users"
         case achievements
+        case campus
+        case phone
     }
 }
 
+// MARK: - Campus
+struct Campus: Codable {
+    let id: Int
+    let name, timeZone: String
+    let language: Language
+    let usersCount, vogsphereID: Int
+    let country, address, zip, city: String
+    let website: String
+    let facebook, twitter: String
+    let active, campusPublic: Bool
+    let emailExtension: String
+    let defaultHiddenPhone: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case timeZone = "time_zone"
+        case language
+        case usersCount = "users_count"
+        case vogsphereID = "vogsphere_id"
+        case country, address, zip, city, website, facebook, twitter, active
+        case campusPublic = "public"
+        case emailExtension = "email_extension"
+        case defaultHiddenPhone = "default_hidden_phone"
+    }
+}
+
+// MARK: - Language
+struct Language: Codable {
+    let id: Int
+    let name, identifier, createdAt, updatedAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, identifier
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+    }
+}
+    
 // MARK: - Achievement
-struct Achievement: Codable {
+struct Achievement: Codable, Identifiable {
     let id: Int
     let name, description: String
     let tier: Tier
@@ -140,18 +205,18 @@ struct Skill: Codable {
 
 // MARK: - UserImage
 struct UserImage: Codable {
-    let link: String
+    let link: String?
     let versions: PurpleVersions
 }
 
 // MARK: - PurpleVersions
 struct PurpleVersions: Codable {
-    let large, medium, small, micro: String
+    let large, medium, small, micro: String?
 }
 
 // MARK: - UserFullResponseImage
 struct UserFullResponseImage: Codable {
-    let link: String
+    let link: String?
     let versions: FluffyVersions
 }
 
@@ -161,7 +226,7 @@ struct FluffyVersions: Codable {
 }
 
 // MARK: - ProjectsUser
-struct ProjectsUser: Codable {
+struct ProjectsUser: Codable, Identifiable {
     let id, occurrence: Int
     let finalMark: Int?
     let status: Status

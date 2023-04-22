@@ -8,28 +8,52 @@
 import SwiftUI
 
 
-struct testing: View {
-    let items = (1...10).map { "item\($0)" }
+struct ContentView: View {
+    let examAttempts = ["Attempt 1: 70%"]
     
     var body: some View {
-        Text("hello")
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-                ForEach(items, id: \.self) { item in
-                    Image(item)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 100, height: 100)
-                        .cornerRadius(10)
-                }
-            }
-            .padding()
+        VStack {
+            ExamView(attempts: examAttempts)
         }
     }
 }
 
-struct testing_Previews: PreviewProvider {
+struct ExamView: View {
+    let attempts: [String]
+    @State private var showAllAttempts = false
+    
+    var body: some View {
+        VStack {
+            Text("Attempts:")
+                .font(.headline)
+            if !showAllAttempts {
+                Text(attempts.last ?? "")
+            } else {
+                VStack {
+                    ForEach(attempts, id: \.self) { attempt in
+                        Text(attempt)
+                            .opacity(100)
+                            .transition(.move(edge: .bottom))
+                            .animation(.easeInOut(duration: 0.5), value: showAllAttempts)
+                            .padding(.bottom, 5)
+                            .foregroundColor(.black)
+                    }
+                }
+                .transition(.identity)
+                .animation(.easeInOut(duration: 0.5), value: showAllAttempts)
+            }
+        }
+        .onTapGesture {
+            withAnimation {
+                showAllAttempts.toggle()
+            }
+        }
+    }
+}
+
+
+struct ExamViewPreview: PreviewProvider {
     static var previews: some View {
-        testing()
+        ContentView()
     }
 }

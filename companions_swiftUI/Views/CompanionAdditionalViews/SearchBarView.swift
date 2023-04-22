@@ -95,6 +95,15 @@ struct SearchBarView: View {
         }
     }
     
+    var newView: some View{
+        List{
+            Text("A")
+            Text("B")
+            Text("C")
+        }
+    }
+    
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -120,8 +129,9 @@ struct SearchBarView: View {
                                 Button(action: {
                                     let _ = print(item.id)
                                     fetchData(id: item.id)
-                                }){QuickUserView(item)}
+                                }){newView}
                                     .contentShape(Rectangle())
+                                    .background(Color("CustomBlue"))
                             }
                             .listStyle(PlainListStyle())
                             .listRowInsets(EdgeInsets())
@@ -134,7 +144,7 @@ struct SearchBarView: View {
                         }
                     }
                 }.sheet(item: $user) { user in
-                    DetailView(user: user)
+                    TemplateView(user: user)
                 }
             }
         }
