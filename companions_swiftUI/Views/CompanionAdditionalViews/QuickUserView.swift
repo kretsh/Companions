@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct QuickUserView: View {
-    let user: User
-    
-    
-    init(_ userToShow: User){
+    let user: UserShort
+
+
+    init(_ userToShow: UserShort){
         self.user = userToShow
     }
     var body: some View {
@@ -23,8 +23,8 @@ struct QuickUserView: View {
                         .clipShape(Circle())
                         .frame(maxWidth: sizes.maxWidth, maxHeight: sizes.maxHeight, alignment: .leading)
                         .aspectRatio(contentMode: .fit)
-                        
-                    
+
+
                 } placeholder: {
                     Image(systemName: "photo.circle")
                         .resizable()
@@ -36,7 +36,7 @@ struct QuickUserView: View {
             }
         }
     }
-    
+
     private struct sizes{
         static let maxHeight: CGFloat = 60
         static let maxWidth: CGFloat = 40

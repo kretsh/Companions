@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AccessToken: Codable {
+struct TokenModel: Codable {
     var accessToken: String
     let tokenType: String
     let expiresIn: Int

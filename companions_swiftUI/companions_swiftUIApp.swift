@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct companions_swiftUIApp: App {
+    var viewModel = ViewModel()
+    
+    
     var body: some Scene {
         WindowGroup {
-            CompanionView()
-//            TemplateView()
-//            SVGView(url: URL(string: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Svg_example.svg")!)
+            CompanionView(viewModel: viewModel)
         }
     }
 }
