@@ -49,21 +49,18 @@ class ViewModel: ObservableObject {
         ]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(accessToken.accessToken)"]
         
-        Alamofire.AF.request(network.urlUsers, method: .get, parameters: parameters, headers: headers)
+        Alamofire.AF.request(network.urlUser, method: .get, parameters: parameters, headers: headers)
             .validate()
             .responseDecodable(of: [UserShort].self) { [weak self] response in
                 guard let self = self else { return }
                 switch response.result {
                 case .success(let fetchedUsers):
-                    print("Uspeshno users")
-                    print(fetchedUsers.count)
                     DispatchQueue.main.async {
                         self.users = fetchedUsers
                     }
                 case .failure(let error):
-                    print(error.acceptableContentTypes)
-                    print(String(describing: error))
-//                    self.errorLoading = true
+//                    print(error.acceptableContentTypes)
+//                    print(String(describing: error))
                     self.isLoading = false
                 }
             }
@@ -89,8 +86,8 @@ class ViewModel: ObservableObject {
                         }
                         isLoading = false
                     case .failure(let error):
-                        print(error.acceptableContentTypes)
-                        print(String(describing: error))
+//                        print(error.acceptableContentTypes)
+//                        print(String(describing: error))
                         self.errorLoading = true
                     }
                 }

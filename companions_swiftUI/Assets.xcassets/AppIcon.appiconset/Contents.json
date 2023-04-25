@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "42_Logo.svg.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
