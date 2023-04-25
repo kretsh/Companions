@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct ExpertiseInformationView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ExpertiseInformationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExpertiseInformationView()
+struct ExpertiseInformationView: View{
+    let user: UserFull
+    
+    var body: some View{
+        if let skills = self.user.cursus?.skills{
+            Text("Skills:").frame(maxWidth: .infinity, alignment: .leading)
+                .font(.system(size: 18, weight: .bold)).padding(10)
+            ForEach(skills, id: \.self.id){ item in
+                VStack{
+                    Text(item.name)
+                    CustomProgressView(progress: item.level)
+                }
+            }
+        }
     }
 }

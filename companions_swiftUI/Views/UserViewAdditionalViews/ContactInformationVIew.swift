@@ -7,14 +7,26 @@
 
 import SwiftUI
 
-struct ContactInformationVIew: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ContactInformationVIew_Previews: PreviewProvider {
-    static var previews: some View {
-        ContactInformationVIew()
+struct ContactInformationView: View{
+    var user: UserFull
+    
+    
+    var body: some View{
+        ZStack{
+            Rectangle()
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .ignoresSafeArea()
+                .foregroundColor(Color("CustomGrey"))
+            
+            VStack(alignment: .leading){
+                Text("Email: " + user.email)
+                    .padding(10)
+                    .foregroundColor(Color("CustomBlue"))
+                Text("Phone:" + user.phone!)
+                    .padding(10)
+            }
+            .foregroundColor(.white)
+            .padding(10)
+        }
     }
 }

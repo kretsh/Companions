@@ -7,14 +7,34 @@
 
 import SwiftUI
 
-struct AvailableView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+func getLocation(_ value: String?) -> (String, String){
+    switch value{
+    case .none:
+        return ("Unavailable", "-")
+    case .some(let someStr):
+        return ("Available", someStr)
     }
+
 }
 
-struct AvailableView_Previews: PreviewProvider {
-    static var previews: some View {
-        AvailableView()
+struct AvailableView: View{
+    let firstRow, secondRow: String
+    
+    init(location: String?){
+        let result = getLocation(location)
+        firstRow = result.0
+        secondRow = result.1
+    }
+    var body: some View{
+        ZStack(){
+            Rectangle()
+                .padding(10)
+                .aspectRatio(3.0/1.3, contentMode: .fit)
+                .foregroundColor(Color("CustomGrey"))
+            VStack{
+                Text(firstRow)
+                Text(secondRow)
+            }
+        }.foregroundColor(.white)
     }
 }

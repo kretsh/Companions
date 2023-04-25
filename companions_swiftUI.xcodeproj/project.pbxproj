@@ -22,6 +22,14 @@
 		DA0F824629F5AE9A004641E0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F824529F5AE9A004641E0 /* ErrorView.swift */; };
 		DA0F824929F6846E004641E0 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F824829F6846E004641E0 /* ProjectsView.swift */; };
 		DA0F824C29F68680004641E0 /* Dates Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F824B29F68680004641E0 /* Dates Extension.swift */; };
+		DA0F824E29F71B72004641E0 /* ImageUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F824D29F71B72004641E0 /* ImageUserView.swift */; };
+		DA0F825029F71BE7004641E0 /* CoalitionBackgrounView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F824F29F71BE7004641E0 /* CoalitionBackgrounView.swift */; };
+		DA0F825229F7212E004641E0 /* PersonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F825129F7212E004641E0 /* PersonInformationView.swift */; };
+		DA0F825429F72189004641E0 /* AvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F825329F72189004641E0 /* AvailableView.swift */; };
+		DA0F825629F721FE004641E0 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F825529F721FE004641E0 /* CustomProgressView.swift */; };
+		DA0F825829F7B008004641E0 /* ExpertiseInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F825729F7B008004641E0 /* ExpertiseInformationView.swift */; };
+		DA0F825A29F7B050004641E0 /* ContactInformationVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0F825929F7B050004641E0 /* ContactInformationVIew.swift */; };
+		DA0F825C29F7B0CB004641E0 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0F825B29F7B0CB004641E0 /* Credentials.plist */; };
 		DAB4970329E6D33E00876515 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4970229E6D33E00876515 /* network.swift */; };
 		DABBC83529E2FAB00091AF7B /* companions_swiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */; };
 		DABBC83929E2FAB20091AF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABBC83829E2FAB20091AF7B /* Assets.xcassets */; };
@@ -43,6 +51,14 @@
 		DA0F824529F5AE9A004641E0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		DA0F824829F6846E004641E0 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		DA0F824B29F68680004641E0 /* Dates Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dates Extension.swift"; sourceTree = "<group>"; };
+		DA0F824D29F71B72004641E0 /* ImageUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUserView.swift; sourceTree = "<group>"; };
+		DA0F824F29F71BE7004641E0 /* CoalitionBackgrounView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoalitionBackgrounView.swift; sourceTree = "<group>"; };
+		DA0F825129F7212E004641E0 /* PersonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationView.swift; sourceTree = "<group>"; };
+		DA0F825329F72189004641E0 /* AvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableView.swift; sourceTree = "<group>"; };
+		DA0F825529F721FE004641E0 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		DA0F825729F7B008004641E0 /* ExpertiseInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertiseInformationView.swift; sourceTree = "<group>"; };
+		DA0F825929F7B050004641E0 /* ContactInformationVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationVIew.swift; sourceTree = "<group>"; };
+		DA0F825B29F7B0CB004641E0 /* Credentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
 		DAB4970229E6D33E00876515 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		DABBC83129E2FAB00091AF7B /* companions_swiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = companions_swiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = companions_swiftUIApp.swift; sourceTree = "<group>"; };
@@ -92,6 +108,7 @@
 		DA01069929EC5BEA0089EF46 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F823F29F460BB004641E0 /* ViewModel.swift */,
 				DA0F824A29F68629004641E0 /* Additional functions */,
 				DA01069C29EC61160089EF46 /* AccessTokenModel.swift */,
 				DA0F824129F542CC004641E0 /* UserShortResponse.swift */,
@@ -104,6 +121,13 @@
 		DA0F824729F5AEDA004641E0 /* UserViewAdditionalViews */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F824D29F71B72004641E0 /* ImageUserView.swift */,
+				DA0F824F29F71BE7004641E0 /* CoalitionBackgrounView.swift */,
+				DA0F825129F7212E004641E0 /* PersonInformationView.swift */,
+				DA0F825329F72189004641E0 /* AvailableView.swift */,
+				DA0F825529F721FE004641E0 /* CustomProgressView.swift */,
+				DA0F825729F7B008004641E0 /* ExpertiseInformationView.swift */,
+				DA0F825929F7B050004641E0 /* ContactInformationVIew.swift */,
 			);
 			path = UserViewAdditionalViews;
 			sourceTree = "<group>";
@@ -111,6 +135,7 @@
 		DA0F824A29F68629004641E0 /* Additional functions */ = {
 			isa = PBXGroup;
 			children = (
+				DAB4970229E6D33E00876515 /* network.swift */,
 				DA0F824B29F68680004641E0 /* Dates Extension.swift */,
 			);
 			path = "Additional functions";
@@ -135,11 +160,10 @@
 		DABBC83329E2FAB00091AF7B /* companions_swiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F825B29F7B0CB004641E0 /* Credentials.plist */,
 				DA01069929EC5BEA0089EF46 /* model */,
 				DA01069429EC4F620089EF46 /* Views */,
 				DABBC83429E2FAB00091AF7B /* companions_swiftUIApp.swift */,
-				DA0F823F29F460BB004641E0 /* ViewModel.swift */,
-				DAB4970229E6D33E00876515 /* network.swift */,
 				DABBC83829E2FAB20091AF7B /* Assets.xcassets */,
 				DABBC83A29E2FAB20091AF7B /* Preview Content */,
 			);
@@ -223,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0F825C29F7B0CB004641E0 /* Credentials.plist in Resources */,
 				DABBC83C29E2FAB20091AF7B /* Preview Assets.xcassets in Resources */,
 				DABBC83929E2FAB20091AF7B /* Assets.xcassets in Resources */,
 			);
@@ -245,10 +270,17 @@
 				DAB4970329E6D33E00876515 /* network.swift in Sources */,
 				DA01068D29EC1AF00089EF46 /* CompanionView.swift in Sources */,
 				DA0F824429F5A41F004641E0 /* UserFullResponse.swift in Sources */,
+				DA0F825A29F7B050004641E0 /* ContactInformationVIew.swift in Sources */,
 				DA01069329EC4F210089EF46 /* RotatingProgressView.swift in Sources */,
+				DA0F825229F7212E004641E0 /* PersonInformationView.swift in Sources */,
+				DA0F825029F71BE7004641E0 /* CoalitionBackgrounView.swift in Sources */,
+				DA0F825829F7B008004641E0 /* ExpertiseInformationView.swift in Sources */,
+				DA0F824E29F71B72004641E0 /* ImageUserView.swift in Sources */,
 				DABBC84829E58A330091AF7B /* BackgroundView.swift in Sources */,
 				DA0F823329F041A7004641E0 /* UserView.swift in Sources */,
 				DA0F824629F5AE9A004641E0 /* ErrorView.swift in Sources */,
+				DA0F825429F72189004641E0 /* AvailableView.swift in Sources */,
+				DA0F825629F721FE004641E0 /* CustomProgressView.swift in Sources */,
 				DABBC83529E2FAB00091AF7B /* companions_swiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

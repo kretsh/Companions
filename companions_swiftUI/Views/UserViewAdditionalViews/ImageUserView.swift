@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ImageUserView: View {
+    let user: UserFull
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ImageUserView_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageUserView()
+        AsyncImage(url: user.image){ item in
+            item
+                .resizable()
+                .frame(maxHeight: 600)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .ignoresSafeArea()
+        }placeholder: {
+            Image("placeholder")
+                .resizable()
+                .frame(maxHeight: 200)
+                .ignoresSafeArea()
+        }
+            
     }
 }

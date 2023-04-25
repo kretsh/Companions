@@ -68,7 +68,6 @@ struct CompanionView: View {
             } else {
                 List(viewModel.users) { user in
                     Button(action: {
-                        let _ = print("I'm pressing the button")
                         fetchData(id: user.id)
                     }){QuickUserView(user)}
                 }
@@ -84,17 +83,3 @@ struct CompanionView: View {
                     
 
 
-
-
-
-
-
-
-struct CompanionView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        let viewModel = ViewModel()
-        
-        CompanionView(viewModel: viewModel)
-    }
-}

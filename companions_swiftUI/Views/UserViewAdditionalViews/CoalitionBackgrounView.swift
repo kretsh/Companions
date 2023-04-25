@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct CoalitionBackgrounView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CoalitionBackroundView: View{
+    var body: some View{
+        Image("Fluvius")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     }
 }
 
-struct CoalitionBackgrounView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoalitionBackgrounView()
-    }
-}

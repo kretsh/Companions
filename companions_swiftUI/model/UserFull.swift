@@ -14,7 +14,7 @@ class UserFull: Identifiable{
     var name: String
     var location: String?
     var image: URL?
-    var campus: String?
+    var campus: String
     var nickname: String
     var wallet: String
     var points: String
@@ -42,14 +42,14 @@ class UserFull: Identifiable{
         for cursusUser in rhs.cursusUsers{
             let cursus = cursusUser.cursus
             self.cursus = cursusUser
+            self.level = cursusUser.level
             if cursus.name.contains("42cursus"){
                 break
             }
         }
-        self.campus = rhs.campus.last?.name
+        self.campus = rhs.campus.last!.name
         self.wallet = String(rhs.wallet)
         self.points = String(rhs.correctionPoint)
-        self.level = self.cursus?.level
         self.member = rhs.kind
         self.email = rhs.email
         self.phone = rhs.phone
