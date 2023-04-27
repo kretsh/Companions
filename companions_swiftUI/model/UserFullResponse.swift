@@ -168,6 +168,7 @@ enum Status: String, Codable {
     case parent = "parent"
     case searchingAGroup = "searching_a_group"
     case waitingForCorrection = "waiting_for_correction"
+    case creatingGroup = "creating_group"
 }
 
 // MARK: - Campus
